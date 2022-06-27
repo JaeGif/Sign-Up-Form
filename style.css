@@ -8,7 +8,7 @@
     --highlight-color: #DF265E;
 }
 body {
-    background-image: url('images/signup-form-background.jpeg');
+    background-image: url('./images/signup-form-background.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -16,6 +16,18 @@ body {
     align-items: center;
     width: auto;
     height: 100%;
+    font-family: 'IntervalBook', 'candy-inc', sans-serif;
+}
+#logo {
+    background-color: black;
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--highlight-color);
+    font-size: xx-large;
+    opacity: 70%;
+    margin-top: -200px;
 }
 #main-content {
     background-color: var(--hero-background-color);
@@ -43,7 +55,6 @@ body {
     gap: 20px;
 }
 label {
-    font-family: 'IntervalBook', 'candy-inc', sans-serif;
     font-size: small;
     font-weight: bold;
     color: var(--highlight-color);
@@ -58,7 +69,6 @@ input {
     height: 25px;
     border: none;
     margin-top: 5px;
-    font-family: 'IntervalBook', sans-serif;
 }
 input[type=number] { 
     -moz-appearance: textfield;
