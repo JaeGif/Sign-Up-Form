@@ -1,8 +1,12 @@
 @font-face {
-    font-family: candy-inc;
+    font-family: 'candy-inc';
     src: url(/Candyinc-9Gl2.otf);
 }
-
+:root {
+    --hero-background-color: rgba(20, 20, 20, .6);
+    --main-theme: none;
+    --highlight-color: #DF265E;
+}
 body {
     background-image: url('images/signup-form-background.jpeg');
     background-size: cover;
@@ -10,16 +14,92 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: fit-content;
     width: auto;
 }
-#form-container {
+
+#main-content {
+    background-color: var(--hero-background-color);
+    width: 40vw;
+    margin-top: 10px;
+    height: 90vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 600px;
+    padding: 20px;
+    gap: 20px;
+}
+
+.form-div {
+    display: flex;
+    flex-flow: wrap;
+    gap: 20px;
 }
 label {
-    font-family: candy-inc, serif;
+    font-family: 'IntervalBook', 'candy-inc', sans-serif;
     font-size: small;
+    font-weight: bold;
+    color: var(--highlight-color);
+}
+.form-containers {
+    display: flex;
+    flex-flow: column wrap;
+}
+input {
+    border-radius: 5px;
+    min-width: 150px;
+    max-width: 250px;
+    height: 20px;
+    border: none;
+    margin-top: 5px;
+}
+input[type=number] { 
+    -moz-appearance: textfield;
+    appearance: textfield;
+    margin: 0; 
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+      -webkit-appearance: none; 
+      margin: 0; 
+}
+input:invalid {
+    border: 1px solid red;
+}
+input:focus {
+    outline: none;
+    box-shadow: 0 0 10px #0000A3;
+}
+#submit-box {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+}
+button {
+    height: 50px;
+    width: 125px;
+    margin-top: 20px;
+    background-color: var(--main-theme);
+    border: solid var(--highlight-color);
+    color: var(--highlight-color);
+    border-radius: 5px;
+}
+button:hover {
+    background-color: var(--highlight-color);
+    color: var(--main-theme);
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+a:hover {
+    color: var(--highlight-color);
+}
+p {
+    color: white;
+    font-size: larger;
+}
+#account {
+    color: var(--highlight-color);
 }
