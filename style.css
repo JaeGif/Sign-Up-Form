@@ -1,6 +1,6 @@
 @font-face {
     font-family: candy-inc;
-    src: url();
+    src: url(/Candyinc-9Gl2.otf);
 }
 
 body {
@@ -20,7 +20,6 @@ body {
     width: 600px;
 }
 label {
-    font-family: ;
+    font-family: candy-inc, serif;
     font-size: small;
-    font-weight: bold;
 }
