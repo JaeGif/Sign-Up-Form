@@ -1,4 +1,26 @@
+@font-face {
+    font-family: candy-inc;
+    src: url();
+}
+
 body {
     background-image: url('images/signup-form-background.jpeg');
     background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    width: auto;
+}
+#form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+}
+label {
+    font-family: ;
+    font-size: small;
+    font-weight: bold;
 }
