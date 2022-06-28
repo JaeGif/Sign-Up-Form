@@ -1,18 +1,18 @@
-const nameSource = document.querySelectorAll('.name')
+// simple validation that passwords are matching, no regex to see here.
 
-function validateName() {
-    for (i = 0; i < nameSources.length; i++) {
-        const regexpname = /a-zA-Z/
-        nameSources[i].onchange = function(){
+const newPassword = document.getElementById('password')
+const confirmPassword = document.getElementById('confirm-password')
 
-            if (regexpname.test(nameSources[i].value)) {
-                nameSources[i].classList.add('valid')
+confirmPassword.addEventListener('keyup', validatePasswords)    // actively checks as user types for more responsive UX
 
-            } else {
-                nameSources[i].classList.add('invalid')
-            }
+function validatePasswords() {
+    if (newPassword.value !== '' && confirmPassword.value !== '') {
+        if (newPassword.value === confirmPassword.value) {
+            confirmPassword.classList.remove('invalid')
+            confirmPassword.classList.add('valid')
+        } else {
+            confirmPassword.classList.remove('valid')
+            confirmPassword.classList.add('invalid')
         }
     }
 }
-validateName()
-console.log(nameSources.classList)

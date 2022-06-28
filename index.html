@@ -23,11 +23,11 @@
                         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
                 </div>
-                    <form action="/runafakescripthere.js" method="post">
+                    <form id="form" action="/runafakescripthere.js" method="post">
                         <div class="form-div">
                             <div class="form-containers">
                                 <label for="first-name">First Name*</label>
-                                <input class="name" type="text" id="first-name" name="first-name" required>
+                                <input class="name" type="text" id="first-name" name="first-name" pattern="[a-zA-Z]+" required>
                             </div>
                             <div class="form-containers">
                                 <label for="last-name"> Last Name*</label>
@@ -43,16 +43,16 @@
                             </div>
                             <div class="form-containers">
                                 <label for="new-password">Password*</label>
-                                <input class="password" type="password" id="password" name="new-password" required>
+                                <input class="password" type="password" id="password" name="new-password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" required>
                             </div>
                             <div class="form-containers">
                                 <label for="confirm-password">Confirm Password*</label>
-                                <input class="password" type="password" id="confirm-password" name="confirm-password" required autocomplete="new-password">
+                                <input class="password" type="password" id="confirm-password" name="confirm-password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" required>
                             </div>
                         </div>
                     </form>
                 <div class="content" id="submit-box"> 
-                    <button>Create Account</button>
+                    <button form="form">Create Account</button>
                     <p id="account">Already have an account?<a href=""> Log in</a></p>
                 </div>
             </div>

@@ -84,10 +84,10 @@ input[type=number]::-webkit-outer-spin-button {
       -webkit-appearance: none; 
       margin: 0; 
 }
-.invalid {
-    border: 2px solid red;
+input[type="text"]:invalid:focus {
+        border: 2px solid red;
 }
-.valid {
+input:valid {
     border: 2px solid green;
 }
 input:focus {
@@ -126,4 +126,10 @@ p {
 }
 #account {
     color: var(--highlight-color);
+}
+input[type=password].valid {
+    border: 2px solid green;
+}
+input[type=password].invalid {
+    border: 2px solid red;
 }
