@@ -1,6 +1,6 @@
-@font-face {
+@font-face {        /* This font is a very bad design choice. I've only included it to practice importing fonts directly from my machine */
     font-family: 'candy-inc';
-    src: url(/Candyinc-9Gl2.otf);
+    src: url(Candyinc-9Gl2.otf);
 }
 :root {
     --hero-background-color: rgba(20, 20, 20, .6);
@@ -25,9 +25,12 @@ body {
     justify-content: center;
     align-items: center;
     color: var(--highlight-color);
-    font-size: xx-large;
-    opacity: 70%;
+    font-size: 45px;
     margin-top: -200px;
+    opacity: 75%;
+    text-emphasis-color: var(--highlight-color);
+    gap: 20px;
+    padding: 10px;
 }
 #main-content {
     background-color: var(--hero-background-color);
@@ -69,6 +72,7 @@ input {
     height: 25px;
     border: none;
     margin-top: 5px;
+    overflow: scroll;
 }
 input[type=number] { 
     -moz-appearance: textfield;
@@ -80,8 +84,11 @@ input[type=number]::-webkit-outer-spin-button {
       -webkit-appearance: none; 
       margin: 0; 
 }
-input:invalid {
-    border: 1px solid red;
+.invalid {
+    border: 2px solid red;
+}
+.valid {
+    border: 2px solid green;
 }
 input:focus {
     outline: none;

@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sign Up</title>
         <link rel="stylesheet" href="style.css">
-        <script defer scr="script.js"></script>
+        <script defer src="script.js"></script>
         <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/interval" type="text/css"/>
     </head>
         <body>
@@ -15,7 +15,7 @@
             </div>
             <div id="main-content">
                 <div class="content" id="message-box">
-                    <p>"The difference between ordinary and extraordinary is that little extra"
+                    <p>"The difference between ordinary and <em>extra</em>ordinary is that little <em>extra</em>"
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
                         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
@@ -26,28 +26,28 @@
                     <form action="/runafakescripthere.js" method="post">
                         <div class="form-div">
                             <div class="form-containers">
-                                <label for="first-name">First Name</label>
-                                <input type="text" id="first-name" name="first-name" required>
+                                <label for="first-name">First Name*</label>
+                                <input class="name" type="text" id="first-name" name="first-name" required>
                             </div>
                             <div class="form-containers">
-                                <label for="last-name"> Last Name</label>
-                                <input type="text" id="last-name" name="last-name" required>
+                                <label for="last-name"> Last Name*</label>
+                                <input class="name" type="text" id="last-name" name="last-name" pattern="[a-zA-Z]+" required>
                             </div>
                             <div class="form-containers">
-                                <label for="email">Email</label>
+                                <label for="email">Email*</label>
                                 <input type="email" id="email" name="email" required>
                             </div>
                             <div class="form-containers">
                                 <label for="phone-number">Phone Number</label>
-                                <input type="number" id="phone-number" name="phone-number">
+                                <input type="number" id="phone-number" name="phone-number" autocomplete="phone-number">
                             </div>
                             <div class="form-containers">
-                                <label for="password">Password</label>
-                                <input type="password" id="password" name="password" required>
+                                <label for="new-password">Password*</label>
+                                <input class="password" type="password" id="password" name="new-password" required>
                             </div>
                             <div class="form-containers">
-                                <label for="confirm-password">Confirm Password</label>
-                                <input type="password" id="confirm-password" name="confirm-password" required>
+                                <label for="confirm-password">Confirm Password*</label>
+                                <input class="password" type="password" id="confirm-password" name="confirm-password" required autocomplete="new-password">
                             </div>
                         </div>
                     </form>
