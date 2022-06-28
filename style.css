@@ -90,6 +90,9 @@ input[type="text"]:invalid:focus {
 input:valid {
     border: 2px solid green;
 }
+input:invalid:focus {
+    border: 2px solid red;
+}
 input:focus {
     outline: none;
     box-shadow: 0 0 10px #0000A3;

@@ -14,5 +14,5 @@ function validatePasswords() {
             confirmPassword.classList.remove('valid')
             confirmPassword.classList.add('invalid')
         }
-    }
+    } 
 }
