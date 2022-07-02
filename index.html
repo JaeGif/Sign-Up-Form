@@ -39,7 +39,10 @@
                             </div>
                             <div class="form-containers">
                                 <label for="phone-number">Phone Number</label>
-                                <input type="number" id="phone-number" name="phone-number" pattern="[0-9]+" autocomplete="phone-number" minlength="9" required>
+                                <!-- Remember that using type=number and constraining it by min and max for phone number validation is incorrect semantically
+                                use type="text" + regex to exclude letters/symbols next time while still using the min/maxlength to validate length or just a regex
+                                pattern -->
+                                <input type="number" id="phone-number" name="phone-number" min="1000000000" max="9999999999" autocomplete="phone" required>
                             </div>
                             <div class="form-containers">
                                 <label for="new-password">Password*</label>
